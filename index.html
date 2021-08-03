@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Axie Infinity Energy Calculator</title>
+		<link rel=icon href="favicon.png" sizes="any" type="image/png">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<!-- UIkit CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/css/uikit.min.css" />
+		<link rel="stylesheet" type="text/css" href="general.css" />
+		<!-- UIkit JS -->
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit-icons.min.js"></script>
+		<script src="vanilla-cookies.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-VXV4KE0N50"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-VXV4KE0N50');
+		</script>
+	</head>
+	<body>
+		<h2 class="uk-heading-line uk-text-center" style="margin-top: 20px;"><span>Axie Infinity Energy Calculator</span></h2>
+		<div id="calculator">
+			<div class="uk-margin uk-text-center">
+	            <h4 class="uk-text" id="round">Round 1</h4>
+	        </div>
+			<div class="uk-margin uk-text-center">
+	            <div class="uk-text">Energy:</div>
+	            <input id="energy" class="uk-input uk-width-1-4 uk-text-center" type="number" >
+	        </div>
+	    	<div class="uk-margin uk-text-center">
+	            <div class="uk-text">Energy Variation:</div>
+	            <input id="energyVariation" class="uk-input uk-width-1-4  uk-text-center" type="number" disabled>
+	        </div>
+	    	<div class="uk-margin uk-text-center">
+		    	<button class="uk-button uk-button-default uk-width-1-4" onclick="usedEnergy();">-1 Energy</button>
+		    	<button class="uk-button uk-button-default uk-width-1-4" onclick="generatedEnergy();">+1 Energy</button>
+
+	    	</div>
+	    	<div class="uk-margin uk-text-center">
+	    		<button class="uk-button uk-button-default uk-width-1-2" onclick="endOfTheRound();">End of The Round</button>	
+			</div>
+			<div class="uk-margin uk-text-center">
+	    		<button class="uk-button uk-button-default uk-width-1-2" onclick="_clear(true);">Clear</button>	
+			</div>
+			<ul uk-accordion class="uk-margin-auto uk-text-center uk-width-1-2@m">
+				<li class="uk-open">
+		            <a class="uk-accordion-title" href="#">History</a>
+		            <div class="uk-accordion-content">
+		                <textarea id="history" disabled="" style="width: 100%; height: 200px; resize: none; padding: 10px; box-sizing: border-box;"></textarea></br>
+		            </div>
+		            <div class="alert uk-margin-top">
+		            </div>
+		        </li>
+	        </ul>
+	    </div>
+	    <div id="ad" style="display: none;">
+	    	<div class="uk-margin uk-text-center">
+	    		<button class="uk-button uk-button-default uk-width-1-2" onclick="openAd();">Unlock For a Day</button>	
+			</div>
+	    </div>
+        <script src="calculator.js"></script>
+	</body>
+</html>
