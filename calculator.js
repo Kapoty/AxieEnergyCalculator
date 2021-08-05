@@ -69,7 +69,7 @@ function checkAd() {
 	      'event_category': 'Unlock',
 	      'event_label': 'Unlocked'
 	    });
-		setCookie("ad", "2", new Date(new Date().getTime() + 2*60000));
+		setCookie("ad", "2", new Date(new Date().getTime() + 24*60*60000));
 		window.location.href = "./";
 	} else {
 		calculator.style.display = "none";
